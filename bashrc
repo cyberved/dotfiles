@@ -37,14 +37,14 @@ bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
 # PYENV
-if [ -d "~/.pyenv/bin" ]; then
+if [ -d ~/.pyenv/bin ]; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="${PYENV_ROOT}/bin:$PATH"
     eval "$(pyenv init -)"
 fi
 
 # RBENV
-if [ -d "~/.rbenv/bin" ]; then
+if [ -d ~/.rbenv/bin ]; then
     export RBENV_ROOT="$HOME/.rbenv"
     export PATH="${RBENV_ROOT}/bin:$PATH"
     eval "$(rbenv init -)"
