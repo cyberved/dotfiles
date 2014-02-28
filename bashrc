@@ -52,3 +52,10 @@ fi
 
 # PROMPT
 PS1='[\u@\h \W]\$ '
+if [ -f /usr/share/git/completion/git-prompt.sh ]; then
+    export GIT_PS1_SHOWDIRTYSTATE=1
+    export GIT_PS1_SHOWSTASHSTATE=1
+    export GIT_PS1_SHOWUNTRACKEDFILES=1
+    source /usr/share/git/completion/git-prompt.sh
+    PS1='[\W\[\e[0;32m\]$(__git_ps1 " %s")\[\e[m\]]\$ '
+fi
