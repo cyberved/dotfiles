@@ -50,6 +50,10 @@ if [ -d ~/.rbenv/bin ]; then
     eval "$(rbenv init -)"
 fi
 
+# NPM
+export NPM_PACKAGES="$HOME/.npm-packages"
+export PATH="$NPM_PACKAGES/bin:$PATH"
+
 # PROMPT
 PS1='[\u@\h \W]\$ '
 if [ -f /usr/share/git/completion/git-prompt.sh ]; then
