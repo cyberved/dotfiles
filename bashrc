@@ -63,3 +63,8 @@ if [ -f /usr/share/git/completion/git-prompt.sh ]; then
     source /usr/share/git/completion/git-prompt.sh
     PS1='[\W\[\e[0;32m\]$(__git_ps1 " %s")\[\e[m\]]\$ '
 fi
+
+# Source local bashrc if it exists
+if [ -f ~/.bashrc.local ]; then
+    source ~/.bashrc.local
+fi
